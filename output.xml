@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on darwin)" generated="2024-07-12T17:23:57.601413" rpa="false" schemaversion="5">
+<suite id="s1" name="Apply For Membership" source="/Users/wabenjamakom/Desktop/Benji/RobotWa/project_root/tests/apply_for_membership.robot">
+<test id="s1-t1" name="Apply For Membership Of Future Skill" line="14">
+<kw name="Open Home Page" owner="HomePage">
+<kw name="Open Browser And Maximize" owner="BrowserLibrary">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-07-12T17:23:57.956740" level="INFO">Opening browser 'chrome' to base url 'https://futureskill.co/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-07-12T17:23:57.955113" elapsed="2.238137"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-12T17:24:00.197594" elapsed="0.485797"/>
+</kw>
+<arg>${INITIAL_URL}</arg>
+<status status="PASS" start="2024-07-12T17:23:57.952043" elapsed="2.732608"/>
+</kw>
+<status status="PASS" start="2024-07-12T17:23:57.950517" elapsed="2.734837"/>
+</kw>
+<kw name="Click Register Button" owner="HomePage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${REGISTER_BUTTON_INITIAL}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-12T17:24:00.688788" elapsed="0.079824"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-12T17:24:00.772274" level="INFO">Clicking element 'xpath=//button[contains(text(), 'สมัครสมาชิก')]'.</msg>
+<arg>${REGISTER_BUTTON_INITIAL}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-12T17:24:00.769798" elapsed="0.599967"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Clicked initial register button</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-07-12T17:24:01.371607" elapsed="0.001305"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>https://app.futureskill.co/register</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2024-07-12T17:24:01.373497" elapsed="0.043119"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Navigated to registration page</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-07-12T17:24:01.417770" elapsed="0.000929"/>
+</kw>
+<status status="PASS" start="2024-07-12T17:24:00.687672" elapsed="0.732408"/>
+</kw>
+<kw name="Fill In Registration Information" owner="RegisterPage">
+<kw name="Fill Form Field" owner="RegisterPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>5 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-12T17:24:01.426615" elapsed="0.071647"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-12T17:24:01.499369" elapsed="0.021524"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-12T17:24:01.522003" level="INFO">Typing text 'your.email@example.com' into text field 'css:input[placeholder='อีเมล']'.</msg>
+<arg>${locator}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-12T17:24:01.521315" elapsed="0.200042"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Filled in ${field_name} field</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-07-12T17:24:01.721837" elapsed="0.000713"/>
+</kw>
+<arg>${EMAIL_FIELD}</arg>
+<arg>${email}</arg>
+<arg>email</arg>
+<status status="PASS" start="2024-07-12T17:24:01.423568" elapsed="0.299249"/>
+</kw>
+<kw name="Fill Form Field" owner="RegisterPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>5 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-12T17:24:01.724717" elapsed="0.016973"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-12T17:24:01.742345" elapsed="0.019804"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-12T17:24:01.763245" level="INFO">Typing text 'John' into text field 'css:input[placeholder='ชื่อ']'.</msg>
+<arg>${locator}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-12T17:24:01.762573" elapsed="0.045511"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Filled in ${field_name} field</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-07-12T17:24:01.808506" elapsed="0.000607"/>
+</kw>
+<arg>${FIRST_NAME_FIELD}</arg>
+<arg>${first_name}</arg>
+<arg>first name</arg>
+<status status="PASS" start="2024-07-12T17:24:01.723585" elapsed="0.086140"/>
+</kw>
+<kw name="Fill Form Field" owner="RegisterPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>5 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-12T17:24:01.812164" elapsed="0.010773"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-12T17:24:01.823339" elapsed="0.018130"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-12T17:24:01.842721" level="INFO">Typing text 'Doe' into text field 'css:input[placeholder='นามสกุล']'.</msg>
+<arg>${locator}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-12T17:24:01.841930" elapsed="0.094434"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Filled in ${field_name} field</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-07-12T17:24:01.936822" elapsed="0.000868"/>
+</kw>
+<arg>${LAST_NAME_FIELD}</arg>
+<arg>${last_name}</arg>
+<arg>last name</arg>
+<status status="PASS" start="2024-07-12T17:24:01.810254" elapsed="0.128245"/>
+</kw>
+<kw name="Fill Form Field" owner="RegisterPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>5 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-12T17:24:01.940417" elapsed="0.011172"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-12T17:24:01.952090" elapsed="0.017637"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-12T17:24:01.970924" level="INFO">Typing text '0612345678' into text field 'css:input[placeholder='เบอร์โทรศัพท์']'.</msg>
+<arg>${locator}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-12T17:24:01.970208" elapsed="0.040422"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Filled in ${field_name} field</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-07-12T17:24:02.011067" elapsed="0.000649"/>
+</kw>
+<arg>${PHONE_FIELD}</arg>
+<arg>${phone}</arg>
+<arg>phone</arg>
+<status status="PASS" start="2024-07-12T17:24:01.939275" elapsed="0.072761"/>
+</kw>
+<kw name="Fill Form Field" owner="RegisterPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}
